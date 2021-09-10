@@ -1,27 +1,4 @@
-import Database from 'better-sqlite3';
-import path from 'path';
-
-let db;
-
-try {
-	const dir = path.resolve(process.cwd(), 'data', 'vercel_test');
-	db = new Database(dir, {
-		readonly: true,
-		fileMustExist: true,
-	});
-} catch (err) {
-	console.error(err);
-	console.error('In path: ', dir);
-}
-
-const sampleQuery = () => {
-	try {
-		const results = db.prepare('SELECT * FROM sample').all();
-		return results;
-	} catch (err) {
-		return err;
-	}
-};
+import { sampleQuery } from '../../data/db'
 
 export default async (req, res) => {
 	try {
