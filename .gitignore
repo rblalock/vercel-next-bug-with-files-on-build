@@ -28,3 +28,6 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+/data/vercel_test
+/data/regulations.zip
+/data/db.json
