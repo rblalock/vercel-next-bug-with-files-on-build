@@ -2,9 +2,9 @@ import Database from 'better-sqlite3';
 import path from 'path';
 
 let db;
+const dir = path.resolve(process.cwd(), 'data', 'vercel_test');
 
 try {
-	const dir = path.resolve(process.cwd(), 'data', 'vercel_test');
 	db = new Database(dir, {
 		readonly: true,
 		fileMustExist: true,
