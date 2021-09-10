@@ -10,8 +10,8 @@ try {
 		fileMustExist: true,
 	});
 } catch (err) {
-	log.error(err);
-	log.error('In path: ', dir);
+	console.error(err);
+	console.error('In path: ', dir);
 }
 
 const sampleQuery = () => {
