@@ -1,5 +1,7 @@
 # Vercel Deployment Bug with Files Downloaded at Build Time
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frblalock%2Fvercel-next-bug-with-files-on-build)
+
 This repo is meant to reproduce a bug where files downloaded at build time are not included in the deployment in NextJS 11 + Vercel.
 
 ## Here's the original Vercel Support Ticket Verbiage for Reference / Context:
@@ -48,4 +50,9 @@ This repo is meant to be as close as possible to a product app that does very si
 
 If you do some file inspection / logging / etc. the file is not present.
 
+### Roll back to NextJS 10
+
+Interestingly enough, if you deploy with NextJS 10, it runs correctly when deployed on Vercel (which is how it's been running for a while for me with no issues).
+
+i.e. Change NextJS package to `"next": "^10.0.3",` and deploy on Vercel and it will work.
 
